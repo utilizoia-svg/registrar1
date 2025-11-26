@@ -40,3 +40,16 @@ curl http://localhost:5000/api/register
 Notas:
 - El proyecto usa `MONGODB_URI` por defecto apuntando a `mongodb://127.0.0.1:27017/registrar_db`.
 - Si quieres desplegar, usa MongoDB Atlas y actualiza `.env`.
+- Si quieres desplegar, usa MongoDB Atlas y actualiza `.env`.
+
+Docker/Compose:
+Puedes levantar un MongoDB local y la API rápidamente con Docker Compose:
+
+```powershell
+docker compose up --build
+```
+
+El fichero `docker-compose.yml` arranca 2 servicios:
+- `mongo` en el puerto 27017
+- `api` en el puerto 5000 y con `MONGODB_URI` apuntando al servicio `mongo`
+
