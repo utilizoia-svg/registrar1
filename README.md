@@ -53,3 +53,14 @@ El fichero `docker-compose.yml` arranca 2 servicios:
 - `mongo` en el puerto 27017
 - `api` en el puerto 5000 y con `MONGODB_URI` apuntando al servicio `mongo`
 
+Seed de datos (prueba):
+Si quieres agregar un registro de ejemplo en tu DB local:
+
+```powershell
+# local (debes tener MongoDB corriendo y MONGODB_URI actualizado):
+npm run seed
+
+# con Docker Compose (si el servicio ya está levantado):
+docker exec -it registrar_api npm run seed
+```
+
